@@ -37,6 +37,7 @@ from netmiko.enterasys import EnterasysSSH
 from netmiko.extreme import ExtremeErsSSH
 from netmiko.extreme import ExtremeExosSSH
 from netmiko.extreme import ExtremeExosTelnet
+from netmiko.extreme import ExtremeIdentifiSSH
 from netmiko.extreme import ExtremeNetironSSH
 from netmiko.extreme import ExtremeNetironTelnet
 from netmiko.extreme import ExtremeNosSSH
@@ -122,6 +123,7 @@ CLASS_MAPPER_BASE = {
     "extreme": ExtremeExosSSH,
     "extreme_ers": ExtremeErsSSH,
     "extreme_exos": ExtremeExosSSH,
+    "extreme_identifi": ExtremeIdentifiSSH,
     "extreme_netiron": ExtremeNetironSSH,
     "extreme_nos": ExtremeNosSSH,
     "extreme_slx": ExtremeSlxSSH,

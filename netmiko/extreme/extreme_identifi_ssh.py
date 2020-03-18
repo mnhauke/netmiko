@@ -1,0 +1,13 @@
+"""Extreme Wireless IdentiFi support."""
+import time
+from netmiko.cisco_base_connection import CiscoSSHConnection
+
+
+class ExtremeIdentifiSSH(CiscoSSHConnection):
+    def session_preparation(self):
+        self._test_channel_read(pattern=r"# ")
+        self.set_base_prompt()
+        # self.disable_paging(command="no page")
+        # self.set_terminal_width(command="terminal width 512")
+        time.sleep(0.3 * self.global_delay_factor)
+        self.clear_buffer()
